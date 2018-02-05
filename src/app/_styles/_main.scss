@@ -1,0 +1,17 @@
+
+@import "app";
+@import "bootstrap-extends";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+
+
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}

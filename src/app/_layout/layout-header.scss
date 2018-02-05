@@ -1,0 +1,109 @@
+.ai-nav-contain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  height: 60px;
+  background-color: #000;
+}
+
+.ai-nav-contain .ai-nav-cover {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+}
+.ai-platform a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.ai-nav-brand {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 60px;
+  width: 173px;
+  margin-right: 45px;
+  background-image: url(//aip.bdstatic.com/portal/dist/1517491846961/ai_images/logo.png);
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 13px;
+}
+.ai-nav-item, .ai-nav-sub-item {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  font-weight:normal;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,PingFangSC-Medium,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+.ai-nav-item {
+  width: 110px;
+  text-align: center;
+}
+.ai-nav-name {
+  height: 100%;
+}
+
+.ai-nav-name, .ai-nav-sub-item {
+  cursor: pointer;
+}
+.ai-nav-detail-l {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  width: 1200px;
+  height: 550px;
+  left: 50%;
+  margin-left: -600px;
+  padding: 30px 58px 50px;
+  font-size: 0;
+}
+
+.ai-nav-detail {
+  top: 60px;
+  display: none;
+  background: rgba(0,0,0,.95);
+  z-index: 320;
+}
+.ai-nav-detail-l-column {
+  float: left;
+  display: inline-block;
+  width: 190px;
+  vertical-align: top;
+}
+
+.ai-nav-tech-group {
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.ai-nav-tech-category-name {
+  display: block;
+  padding-bottom: 22.5px;
+  line-height: 1;
+  font-size: 15px;
+  text-align: left;
+  color: #fff;
+}
+.ai-nav-tech-category-name a {
+  color: #fff;
+}
+
+.ai-platform a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.ai-nav-tech-name {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 13px;
+  text-align: left;
+}
+.ai-nav-tech-name a {
+  color: #999;
+}

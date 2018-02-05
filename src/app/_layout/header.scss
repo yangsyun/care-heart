@@ -1,0 +1,77 @@
+
+a {
+  cursor: default;
+  font-family: \\5FAE\8F6F\96C5\9ED1,Microsoft Yahei,Hiragino Sans GB,Helvetica,Arial,sans-serif;
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+  }
+}
+
+
+section {
+  margin: 0;
+  padding: 0;
+  .topbar {
+    height: 30px;
+    background: #292B2F;
+    h6{
+      float: left;
+      color: #fff;
+      padding-left: 20px;
+      line-height: 12px
+    }
+  }
+
+  .nav-select {
+    display: none;
+  }
+  .nav-region {
+    position: absolute;
+    right:13%;
+    .nav {
+      .nav-item {
+        height:30px;
+        line-height: 12px;
+        a{
+           font-weight: normal;
+           color: #fff;
+           font-size: 12px;
+        }
+        a:hover{
+          background:#131418;;
+          font-weight: bold;
+        }
+        .dropdown-menu{
+          min-width: 100px;
+          background: #131418;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+          a{
+            color: #fff;
+            font-size: 12px;
+            line-height: 30px;
+          }
+          a:hover{
+            background: #0098F6;
+            font-weight:bold;
+          }
+
+        }
+      }
+    }
+  }
+  }
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.top-nav{
+  height: 50px;
+  background: #131418;
+  box-shadow: 0 3px 0 0 #0098F6;
+}
+
+

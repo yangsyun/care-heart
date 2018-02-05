@@ -1,0 +1,38 @@
+.title-style {
+  float: left;
+  height: 50px;
+  width: 220px;
+  margin-left: 52px;
+  h3 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 12px;
+    color: #fff;
+  }
+}
+
+.nav-pills {
+  float: left;
+  width: 70%;
+  height: 48px;
+  .nav-item {
+    height: 48px;
+    a {
+      color: #ccc;
+      font-size: 12px;
+      line-height: 17px;
+    }
+    a:hover {
+      color: #fff;
+      background: #42485B;
+      border-bottom: 2px solid #0098F6;
+      border-radius: 0;
+    }
+  }
+}
+
+
+
+
+
+
