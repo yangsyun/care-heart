@@ -6,10 +6,10 @@
   <div class="bannerContainer">
     <div class="mark"></div>
     <ul class="bannerPicList">
-      <li [class.active]="currentPic==0"><img src="/assets/images/5.jpg"/><h3>呵护❤️健康 实现新梦想</h3></li>
-      <li [class.active]="currentPic==1"><img src="/assets/images/6.jpg"/><h3>把技术做到精湛 把服务做到极致</h3></li>
-      <li [class.active]="currentPic==2"><img src="/assets/images/7.jpg"/><h3>移动互联网时代全新的诊所工作模式</h3></li>
-      <li [class.active]="currentPic==3"><img src="/assets/images/8.jpg"/><h3>一站式全流程的诊所工作站</h3></li>
+      <li [class.active]="currentPic==0"><img src="/assets/images/1.jpg"/><h3>呵护❤️健康 实现新梦想</h3></li>
+      <li [class.active]="currentPic==1"><img src="/assets/images/2.jpg"/><h3>技术到精湛 服务到极致</h3></li>
+      <li [class.active]="currentPic==2"><img src="/assets/images/3.jpg"/><h3>移动互联网 时代全新式</h3></li>
+      <li [class.active]="currentPic==3"><img src="/assets/images/4.jpg"/><h3>一站式流程 诊所工作站</h3></li>
     </ul>
     <ul class="bannerBtnList">
       <li><span class="picBtn" (click)="changebanner(0)"></span></li>
@@ -21,208 +21,232 @@
   </div>
 
   <div class="data-content">
+    <div class="kernel">
+      <h2>核心专家</h2>
+      <h5>The Core Experts</h5>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>预约</a>
+          </div>
+
+          <dl class="subscribe">
+            <dt><img src="/assets/images/menzhen.png" alt=""></dt>
+            <dd>
+              <h4>程龙龙</h4>
+              <p>集团核心专家</p>
+            </dd>
+          </dl>
+          <ul class="list-care">
+            <li>解放军总医院内科临床部心血管内科</li>
+            <li>主任医师</li>
+            <li>主任医师、教授</li>
+            <li>擅长快速心律失常的射频消融治疗，包括房颤及室性心律失常在三维指导下的射频消融，以及缓慢心律失常的永久起搏器植入及随访优化，心力衰竭患</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>预约</a>
+          </div>
+
+          <dl class="subscribe">
+            <dt><img src="/assets/images/yaoxing.png" alt=""></dt>
+            <dd>
+              <h4>张国庆</h4>
+              <p>集团核心专家</p>
+            </dd>
+          </dl>
+          <ul class="list-care">
+            <li>上海市中心医院</li>
+            <li>心血管病研究所副所长、心脏中心主任</li>
+            <li>主任医师、医学博士后、研究生导师</li>
+            <li>在上海地区最早独立开展室上性心动过速、室性心律失常、房性心动过速、心房扑动、心房颤动等多种心律失常的射频消融治疗</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
+        </div>
 
 
+      </div>
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>预约</a>
+          </div>
 
+          <dl class="subscribe">
+            <dt><img src="/assets/images/yunzhong.png" alt=""></dt>
+            <dd>
+              <h4>杨建国</h4>
+              <p>集团核心专家</p>
+            </dd>
+          </dl>
+          <ul class="list-care">
+            <li>第二军医大学附属长海医院</li>
+            <li>主任医师</li>
+            <li>主任医师、教授、博士生导师</li>
+            <li>中国医师协会中西医结合分会心血管病专业委员会常委 国际心血管病杂志编委 中华现代内科学杂志编委 第二军医大学学报审稿专家 武汉大学学报医学版</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+    <div class="data-health">
+      <div class="care">
+        <h1 class="health">丰富易用的解决方案</h1>
+        <p>为基层医疗医护人员提供诊所内部临床、运营、医技及供应链、绩效管理运营等服务三大核心————12功能板块</p>
+      </div>
+
+      <div class="row function">
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/zhihui.png" alt=""></dt>
+            <dd>
+              <h2>诊疗管理</h2>
+              <p>专业等诊疗工作站，全流程助力医护工作</p>
+              <ul>
+                <li><img src="/assets/images/1ertong.png" alt="">预约管理</li>
+                <li><img src="/assets/images/8bingli.png" alt="">电子病历管理</li>
+              </ul>
+            </dd>
+          </dl>
+
+        </div>
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/menzhen.png" alt=""></dt>
+            <dd>
+              <h2>诊疗管理</h2>
+              <p>专业等诊疗工作站，全流程助力医护工作</p>
+              <ul>
+                <li><img src="/assets/images/5tijian.png" alt="">辅助诊疗</li>
+                <li><img src="/assets/images/6yiliao.png" alt="">发药收费管理</li>
+              </ul>
+            </dd>
+          </dl>
+
+        </div>
+
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/yaoxing.png" alt=""></dt>
+            <dd>
+              <h2>运营管理</h2>
+              <p>先进等运营模式，全方位提升诊所管理</p>
+              <ul>
+                <li><img src="/assets/images/7gonggong.png" alt="">连锁管理</li>
+                <li><img src="/assets/images/4manxingbing.png" alt="">经营分析统计</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/jiankang.png" alt=""></dt>
+            <dd>
+              <h2>运营管理</h2>
+              <p>先进等运营模式，全方位提升诊所管理</p>
+              <ul>
+                <li><img src="/assets/images/10qita.png" alt="">药品管理</li>
+                <li><img src="/assets/images/9geren.png" alt="">集采平台</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/zhihui.png" alt=""></dt>
+            <dd>
+              <h2>客户管理</h2>
+              <p>全面的客户关系管理，提升用户留存率</p>
+              <ul>
+                <li><img src="/assets/images/3chuanran.png" alt="">会员管理</li>
+                <li><img src="/assets/images/8bingli.png" alt="">电子病历档案管理</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-2">
+          <dl>
+            <dt><img src="/assets/images/jiankang.png" alt=""></dt>
+            <dd>
+              <h2>客户管理</h2>
+              <p>全面的客户关系管理，提升用户留存率</p>
+              <ul>
+                <li><img src="/assets/images/5tijian.png" alt="">随访管理</li>
+                <li><img src="/assets/images/2funv.png" alt="">医患满意度管理</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <div style="width:100%; height: 50px;"></div>
+    </div>
+
+
+  <div class="data-content">
     <div class="data-enter">
-      <h4>平台快速入口</h4>
+      <div class="care here">
+        <h1 class="health">在这里，有你经营所需要的一切</h1>
+        <p>平安万家为您提供更专业的一站式诊所经营解决方案</p>
+      </div>
       <div class="data-services">
         <a href="/#/enterprise">
           <dl>
             <dt><img src="/assets/home/enterprise.png" alt=""></dt>
-            <dd>大数据采集平台</dd>
+            <dd>万家认证</dd>
           </dl>
         </a>
-
         <a href="/#/discounts-government">
           <dl>
             <dt><img src="/assets/home/government.png" alt=""></dt>
-            <dd>采集监控平台</dd>
+            <dd>企业服务</dd>
           </dl>
         </a>
-
         <a href="/#/discounts-people">
           <dl>
             <dt><img src="/assets/home/personage.png" alt=""></dt>
-            <dd>数据治理平台</dd>
+            <dd>医疗保险</dd>
           </dl>
         </a>
         <a href="/#/discounts-company">
           <dl>
             <dt><img src="/assets/home/scientific-research.png" alt=""></dt>
-            <dd>个人健康档案</dd>
+            <dd>商品营销</dd>
           </dl>
         </a>
         <a href="/#/cloud">
           <dl>
             <dt><img src="/assets/home/cloud.png" alt=""></dt>
-            <dd>BI展示平台</dd>
+            <dd>品牌营销</dd>
           </dl>
         </a>
         <a href="/#/security">
           <dl>
             <dt><img src="/assets/home/security.png" alt=""></dt>
-            <dd>分析挖掘平台</dd>
+            <dd>万家人才</dd>
           </dl>
         </a>
       </div>
-    </div>
-
-    <div class="policy-trend">
-      <div class="trend">
-        <h5>政策动态</h5>
-      </div>
-
-      <div class="discounts">
-        <a href="/#/discounts-government">
-          <img src="/assets/home/administration.png" alt="">
-          <p>
-            <span>惠政</span><br>
-            <button class="btn-default btn-enter">进入</button>
-          </p>
-        </a>
-        <a href="/#/discounts-company">
-          <img src="/assets/home/company.png" alt="">
-          <p>
-            <span>惠企</span><br>
-            <button class="btn-default btn-enter btn-company">进入</button>
-          </p>
-        </a>
-        <a href="/#/discounts-people">
-          <img src="/assets/home/people.png" alt="">
-          <p>
-            <span>惠民</span><br>
-            <button class="btn-default btn-enter btn-people">进入</button>
-          </p>
-        </a>
+      <div class="teamwork">
+        <button class="btn-primary btn-free">申请合作</button>
       </div>
     </div>
 
-    <div class="enter-company">
-      <div class="enter-title">
-        <h5>入驻单位</h5>
-        <span (click)="gotoStructuring()">合作入口 ></span>
-      </div>
-
-      <div class="companys">
-        <ul class="company">
-          <li class="discounts company-list">
-            <a href="http://www.tsinghua.edu.cn/publish/newthu/index.html">
-              <img src="/assets/home/qinghua.png" alt="">
-            </a>
-            <a href="http://www.pku.edu.cn/">
-              <img src="/assets/home/beijing.png" alt="">
-            </a>
-            <a href="http://www.greatwall.cn/">
-              <img src="/assets/home/greatwall.png" alt="">
-            </a>
-            <a href="http://www.dell.com/zh-cn/">
-              <img src="/assets/home/dell.png" alt="">
-            </a>
-            <a href="https://www.philips.com.cn/">
-              <img src="/assets/home/fhilips.png" alt="">
-            </a>
-          </li>
-          <li class="discounts company-list">
-            <a href="http://www.qq.com/">
-              <img src="/assets/home/tengxun.png" alt="">
-            </a>
-            <a href="https://www.ibm.com/cn-zh/">
-              <img src="/assets/home/IBM.png" alt="">
-            </a>
-            <a href="http://www.isoftstone.com/">
-              <img src="/assets/home/ruantong.png" alt="">
-            </a>
-            <a href="http://www.inspur.com/">
-              <img src="/assets/home/langchao.png" alt="">
-            </a>
-            <a href="https://skymind.ai/">
-              <img src="/assets/home/skymind.png" alt="">
-            </a>
-          </li>
-          <li class="discounts company-list">
-            <a href="https://www.synyi.com/">
-              <img src="/assets/home/senyi.png" alt="">
-            </a>
-            <a href="https://www.dingxiang-inc.com/">
-              <img src="/assets/home/dingxiang.png" alt="">
-            </a>
-            <a href="http://www.berrygenomics.com/">
-              <img src="/assets/home/beirui.png" alt="">
-            </a>
-            <a href="http://www.youedata.com/">
-              <img src="/assets/home/youyi.png" alt="">
-            </a>
-            <a href="http://www.dothealth.cn/">
-              <img src="/assets/home/judian.png" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="enter-company strategy-cooperation" style="margin-top: 30px">
-      <div class="enter-title">
-        <h5>战略合作</h5>
-        <span (click)="gotoStructuring()">战略合作 ></span>
-      </div>
-      <div class="companys">
-        <ul class="company">
-          <li class="strategy">
-            <a href="https://www.ibm.com/cn-zh/">
-              <img src="/assets/home/Ibms.png" alt="">
-            </a>
-            <a href="https://www.wuxiapptec.com.cn/">
-              <img src="/assets/home/yaoming.png" alt="">
-            </a>
-            <a href="https://www.philips.com.cn/">
-              <img src="/assets/home/philips.png" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="enter-company capital-zoology">
-      <div class="enter-title">
-        <h5>资本生态</h5>
-        <span (click)="gotoStructuring()">生态合作 ></span>
-      </div>
-
-      <div class="companys">
-        <ul class="company">
-          <li class="capital">
-            <a href="https://www.sequoiacap.com/china/">
-              <img src="/assets/home/sequola.png" alt="">
-            </a>
-            <a href="http://www.cec.com.cn/">
-              <img src="/assets/home/dianzi.png" alt="">
-            </a>
-            <a href="">
-              <img src="/assets/home/shugang.png" alt="">
-            </a>
-            <a href="">
-              <img src="/assets/home/shurong.png" alt="">
-            </a>
-          </li>
-          <li class="capital">
-            <a href="https://www.synyi.com/">
-              <img src="/assets/home/zhineng.png" alt="">
-            </a>
-            <a href="http://www.medlinker.com/">
-              <img src="/assets/home/medlinker.png" alt="">
-            </a>
-            <a href="http://www.mobilemd.cn/">
-              <img src="/assets/home/taimei.png" alt="">
-            </a>
-            <a href="http://www.dothealth.cn/">
-              <img src="/assets/home/yiliao.png" alt="">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
+
 </div>
 
 

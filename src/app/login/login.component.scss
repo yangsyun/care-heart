@@ -1,27 +1,25 @@
 
-
-
 .home {
   margin: 0;
   padding: 0;
   position: relative;
-  background: url("/assets/home/login-bg.png") no-repeat center;
+  background: url("/assets/images/denglu.jpg") no-repeat center;
   width: 100vw;
   height: 100vh;
   background-position: center center;
   background-size: cover;
 
 }
-
 .home-login{
   width: 25%;
-  height:430px;
-  border:1px solid #397cd5;
+  height: 500px;
+  border: 1px solid #397cd5;
   box-shadow: 2px 2px 2px;
-  background: #fff;
-  margin-left: 35%;
+  background: #000;
+  margin-left: 65%;
+  opacity: 0.5;
+  margin-top: 3%;
 }
-
 .input-group {
   position: relative;
   display: inline-table;
@@ -65,18 +63,13 @@
 .form-user{
   text-align: left;
 }
-
-
-
 .content {
   text-align: center;
 }
-
 h2 {
   margin-bottom: 70px;
   color:#333;
 }
-
 .form-group {
   margin-bottom: 3rem;
   .btn-login {
@@ -86,14 +79,12 @@ h2 {
     margin-left: 7%;
   }
 }
-
 .goto-register{
   color:#ccc;
   .register{
     font-size:16px;
   }
 }
-
 .card.card-danger {
   margin-top: -2rem;
   margin-bottom: 1rem;
@@ -104,50 +95,10 @@ h2 {
     margin-right: 1em;
   }
 }
-
-
-
 .top-nav{
   height: 50px;
   background: #131418;
   box-shadow: 0 3px 0 0 #0098F6;
-}
-
-
-.nav-pills {
-  float: left;
-  width:51%;
-  .nav-item {
-    height: 50px;
-    a{
-      color: #fff;
-      font-size: 14px;
-      line-height: 20px;
-    }
-    a:hover{
-      background: #424A55;
-      font-weight: bold;
-    }
-    .dropdown-menu{
-      margin: 0;
-      padding: 0;
-      a{
-        color: #0A77BD;
-        font-size: 14px;
-        line-height: 32px;
-        img{
-          width:20px;
-          height: 20px;
-          margin-right: 10px;
-        }
-      }
-      a:hover{
-        background: #eee;
-        font-weight:bold;
-      }
-
-    }
-  }
 }
 
 .logo {
@@ -167,6 +118,8 @@ h2 {
   height: 50px;
   width: 220px;
   margin-left: -16px;
+  margin-top: 20px;
+  color: #333;
   h3 {
     font-size:18px;
     font-weight: normal;

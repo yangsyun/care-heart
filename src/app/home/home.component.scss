@@ -57,7 +57,7 @@
   position: absolute;
   left:0;
   top:0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.6);
 }
 .bannerPicList{
   padding: 0;
@@ -72,7 +72,7 @@
   }
   h3 {
     position: absolute;
-    left: 34%;
+    left: 37%;
     top: 40%;
     font-size: 48px;
     color: #fff;
@@ -142,27 +142,178 @@
     margin-top: 30px;
   }
 }
-.data-enter{
-  width: 1200px;
-  height: 210px;
-  margin: 20px auto;
-  background: #f5f5f5;
-  h4{
-    text-align: center;
-    line-height:60px;
+
+.kernel{
+   height: 80px;
+   margin: 40px 0 40px 0;
+   text-align: center;
+  h2{
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    color: #3498db;
+    box-shadow: 0px -2px 4px 2px;
+  }
+  h5{
     font-size: 20px;
+    color: #ccc;
+  }
+}
+.expert {
+  width: 100%;
+  border:1px solid #71bcd1;
+  border-radius: 3px;
+  position: relative;
+  .hot-order {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    position: absolute;
+    left:10%;
+    top:-40px;
+    box-shadow: -15px 5px 15px #0098F6 inset;
+    background: #fff;
+    a{
+      line-height: 80px;
+      padding-left: 16px;
+      font-size: 20px;
+      color: #52b766;
+    }
+  }
+  .list-care{
+    list-style: none;
+    padding: 0;
+    li{
+      color: #828482;
+      font-size: 13px;
+      padding-left: 20px;
+      &:nth-last-child(1){
+        padding-top: 10px;
+      }
+    }
+  }
+  .btn-know{
+    margin-left: 77%;
+    margin-bottom: 10px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 13px;
+  }
+  &:hover{
+    border:3px solid #3498db;
+  }
+
+}
+
+.subscribe{
+  background: #71bcd1;
+  height: 180px;
+  dt{
+    margin-top: 15px;
+    float: right;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  dd{
+    margin: 23% 0 0 5%;
+    float: left;
+    color: #333;
+  }
+}
+
+.data-health {
+  margin-top: 40px;
+  background: #000;
+}
+.care{
+  padding-top: 100px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  .health {
+    margin-bottom: 31px;
+    font-size: 36px;
+    letter-spacing: 2px;
+    line-height: 36px;
+  }
+}
+
+
+.function {
+  margin-top: 50px;
+  margin-left:25px;
+  dl{
+    transition:all 1s;
+    width: 90%;
+    background-color: #fff;
+    dt{
+      width: 100%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd{
+      height: 170px;
+      color: #333;
+      h2{
+        padding: 20px 0 0 10px;
+        font-size: 20px;
+      }
+      p{
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      ul{
+        font-size: 13px;
+        padding-left:10px;
+        list-style: none;
+        li{
+          line-height: 30px;
+          color: #666;
+          img{
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    &:hover{
+      box-shadow: 0px 0px 15px 10px #2b7de2;
+    }
+  }
+}
+
+.here{
+  color: #000;
+  h1{
     font-weight: bold;
   }
+}
+.data-enter{
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
   .data-services{
     width: 100%;
-    height:140px;
-    margin-bottom: 40px;
+    height: 200px;
+    margin-top: 40px;
     dl{
       float: left;
       width:16.66%;
       dt{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         margin: 0 auto;
         img{
           width: 100%;
@@ -170,13 +321,23 @@
         }
       }
       dd{
+        color: #000;
         text-align: center;
         padding-top: 20px;
       }
     }
   }
 }
-
+.teamwork {
+  width: 220px;
+  margin: 0 auto;
+  .btn-free {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+}
 .policy-trend{
   width: 1200px;
   height:300px;
@@ -234,100 +395,3 @@
   }
 }
 
-
-.enter-company{
-  width:1200px;
-  height: 390px;
-  border-top: 1px solid #ccc;
-  .enter-title{
-    position: relative;
-    h5{
-      line-height: 40px;
-      padding-left: 20px;
-      font-size: 18px;
-      font-weight: bold
-    }
-    span{
-      position: absolute;
-      right:0;
-      top:5px;
-      width: 100px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 3px;
-      background: red;
-      color: #fff;
-      font-size: 14px;
-      font-weight: bold;
-      padding-left: 10px;
-    }
-  }
-  .company{
-    padding:0;
-    margin:0;
-  }
-  .company-list{
-    list-style: none;
-    width: 100%;
-    display: flex;
-    margin-top: 20px;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    a{
-      width: 18%;
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-
-.company-list, .strategy, .capital{
-  list-style: none;
-  width: 100%;
-  display: flex;
-  margin-top: 20px;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.strategy-cooperation{
-  width: 1200px;
-  height: 196px;
-}
-
-.strategy{
-
-  a{
-    width: 32%;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-.capital-zoology{
-  width: 1200px;
-  height: 300px;
-}
-
-.capital{
-  a{
-    width: 24%;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-
-
-
-.line_chart_style {
-  width: 100%;
-  height: 500px;
-  padding: 10px;
-  margin-right: 10px;
-}
