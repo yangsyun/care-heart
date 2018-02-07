@@ -1,70 +1,19 @@
 <div class="top-nav">
-  <div class="logo">
-    <a href="/#/home" title="返回首页"></a>
+  <div style="width: 1200px;margin: 0 auto">
+    <div class="logo">
+      <a href="/#/home" title="返回首页"></a>
+    </div>
+    <div class="title-style">
+      <a href="/#/home">
+        <h3>呵护心脏健康 , 为了更好的医疗服务</h3>
+      </a>
+    </div>
   </div>
-  <div class="title-style">
-    <a href="/#/home">
-      <h3>国家健康医疗大数据平台</h3>
-    </a>
-  </div>
-  <ul class="nav navbar-nav nav-pills">
-    <li class="nav-item">
-      <a href="/#/home"  [ngStyle]="getStyle(flag01)" class="nav-link" routerLinkActive="active">
-        首页
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="/#/data-set/0" [ngStyle]="getStyle(flag02)" class="nav-link" routerLinkActive="active">
-        数据集
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="/#/discounts-government" [ngStyle]="getStyle(flag03)" class="nav-link" routerLinkActive="active">
-        机构
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="/#/discounts-people" [ngStyle]="getStyle(flag04)" class="nav-link" routerLinkActive="active">
-        反馈
-      </a>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="" [ngStyle]="getStyle(flag05)" class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active">
-        开发商
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="/#/data-api" [ngStyle]="getStyle(flag06)">数据API</a></li>
-      </ul>
-    </li>
-
-    <li class="nav-item dropdown">
-      <a href="#" [ngStyle]="getStyle(flag07)" class="nav-link dropdown-toggle" data-toggle="dropdown">
-        主题
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a (click)="toDataSet(1)"><img src="/assets/home/zhengfu.png">政府</a></li>
-        <li><a (click)="toDataSet(2)"><img src="/assets/home/baoxian.png">保险</a></li>
-        <li><a (click)="toDataSet(3)"><img src="/assets/home/yaoqi.png">药企</a></li>
-        <li><a (click)="toDataSet(4)"><img src="/assets/home/jishu.png">技术</a></li>
-        <li><a (click)="toDataSet(5)"><img src="/assets/home/safe.png">安全</a></li>
-        <li><a (click)="toDataSet(6)"><img src="/assets/home/rengong.png">AI</a></li>
-        <li><a (click)="toDataSet(7)"><img src="/assets/home/yiliaojigou.png">医疗机构</a></li>
-        <li><a (click)="toDataSet(8)"><img src="/assets/home/shujukaifang.png">数据开放</a></li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a href="/#/about" [ngStyle]="getStyle(flag08)" class="nav-link" routerLinkActive="active">
-        关于
-      </a>
-    </li>
-  </ul>
 </div>
 
 <div class="home">
-  <div style="height:50px;"></div>
-  <div class="home-login">
+  <div style="height:30px;"></div>
+  <div class="home-login" style="height: 600px;margin-top: 0">
       <form method="post" id="ajaxForm" class="content center-block">
         <h2>注册新用户</h2>
 
@@ -72,10 +21,10 @@
           <label class="sr-only" for="username">用户名</label>
           <div class="input-group input-group-clear">
             <div class="input-group-addon">
-              <img src="/assets/images/username.svg" class="icon" title="用户名"/>
+              用户名
             </div>
             <input [(ngModel)]="form.username" name="username" type="text" class="form-control" id="username"
-                   placeholder="必须是三位以上的英文字母或数字" autofocus/>
+                   placeholder="必须是三位以上的英文字母或数字" autofocus/><span>*</span>
           </div>
         </div>
 
@@ -83,10 +32,92 @@
           <label class="sr-only" for="password">密码</label>
           <div class="input-group input-group-clear">
             <div class="input-group-addon">
-              <img src="/assets/images/password.svg" class="icon" title="密 码"/>
+             密 码
             </div>
             <input [(ngModel)]="form.password" name="password" type="password" class="form-control" id="password"
-                   placeholder="数字和字母组成，六位以上"/>
+                   placeholder="数字字母大小写组成，六位以上"/><span>*</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="password">机构</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+             机 构
+            </div>
+            <select  class="form-control" name="" id="">
+              <option value="北京人民医院">北京人民医院</option>
+              <option value="北京301医院">北京301医院</option>
+              <option value="北京大学第三医院">北京大学第三医院</option>
+            </select><span>*</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="isname">姓名</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              姓 名
+            </div>
+            <input [(ngModel)]="form.isname" name="isname" type="isname" class="form-control" id="isname"
+                   placeholder="可以使用字母大小写或者汉字"/><span>*</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="phone">电话</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              电 话
+            </div>
+            <input [(ngModel)]="form.phone" name="phone" type="phone" class="form-control" id="phone"
+                   placeholder="必须是数字"/><span>*</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="email">E-mail</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              邮 箱
+            </div>
+            <input [(ngModel)]="form.email" name="email" type="email" class="form-control" id="email"
+                   placeholder="经常使用的邮箱"/><span>*</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="address">地址</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              地 址
+            </div>
+            <input [(ngModel)]="form.address" name="address" type="address" class="form-control" id="address"
+                   placeholder="常住地址或者户口所在地"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="set">账户设置</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              账户设置
+            </div>
+            <select  class="form-control" name="set" id="set">
+              <option value="正常使用">正常使用</option>
+              <option value="到期作废">到期作废</option>
+              <option value="账户被锁">账户被锁</option>
+              <option value="密码到期">密码到期</option>
+            </select><span>*</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="role">分配角色</label>
+          <div class="input-group input-group-clear">
+            <div class="input-group-addon">
+              分配角色
+            </div>
+            <select  class="form-control" name="role" id="role">
+              <option value="医生">医生</option>
+              <option value="患者">患者</option>
+            </select><span>*</span>
           </div>
         </div>
 
