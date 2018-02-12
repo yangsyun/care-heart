@@ -1,0 +1,78 @@
+<app-layout-header></app-layout-header>
+
+<div class="main-content" style="margin-top: 60px">
+
+  <div class="data-content">
+    <div style="height: 60px"></div>
+    <h4>患者监测信息</h4>
+    <div class="jiance">
+      <div class="row data-message user-message">
+        <h5 class="col-lg-2">用户信息</h5>
+        <div class="col-lg-9">
+          <p>
+            <label for="">卡号 <span>*</span></label>
+            <input type="text" placeholder="必须是数字">
+          </p>
+          <p>
+            <label for="">姓名<span>*</span></label>
+            <input type="text">
+          </p>
+          <p>
+            <label for="">出身日期<span>*</span></label>
+            <input type="text" placeholder="1976/10/23">
+          </p>
+          <p>
+            <label for="">性别</label>
+            <select name="" id="">
+              <option>男</option>
+              <option>女</option>
+            </select>
+          </p>
+          <p>
+            <label for="">职业</label>
+            <input type="text">
+          </p>
+          <p>
+            <label for="">电话号码</label>
+            <input type="text">
+          </p>
+          <p>
+            <label for="">地址</label>
+            <input type="text">
+          </p>
+          <p>
+            <label for="">邮编</label>
+            <input type="text">
+          </p>
+        </div>
+
+      </div>
+      <div class="row data-message user-message">
+        <h5 class="col-lg-2">监测记录</h5>
+        <div class="col-lg-9">
+          <p>
+            <label for="">开始时间</label>
+            <input type="text" placeholder="2013-10-23">
+          </p>
+          <p>
+            <label for="">医师姓名</label>
+            <input type="text" placeholder="请同事填写开始时间和医师姓名">
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <button class="btn-primary tijiao">保存</button>
+    <button class="btn-primary tijiao" (click)="cancel()">取消</button>
+  </div>
+
+  <div style="height: 60px"></div>
+
+</div>
+
+
+<app-layout-footer></app-layout-footer>

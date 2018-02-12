@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
 
   currentPic = 0;
 
-  parent = '';
   data = [];
 
   constructor(private router: Router, public http: Http) {
@@ -31,10 +30,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotoStructuring() {
-    this.router.navigateByUrl('/platform-nav');
+  gotoDoctor() {
+    this.router.navigateByUrl('/doctor-enter/0');
   }
-
+  gotoPatient() {
+    this.router.navigateByUrl('/patient-enter/0');
+  }
 
 
 

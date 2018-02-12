@@ -1,0 +1,65 @@
+.main-content{
+  background: #fff;
+}
+
+
+.data-content{
+  background: #fff;
+  width: 1200px;
+  margin: 0 auto;
+  h4{
+    color: #fff;
+    font-size: 26px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0px -2px 4px 2px #007aff;
+    background: #007aff;
+  }
+  .data-message {
+    width: 100%;
+    h5{
+      margin-left: 22px;
+      font-size: 16px;
+    }
+    form {
+      border-bottom: 1px solid #ccc;
+    }
+    p{
+      line-height: 28px;
+      label{
+        width: 100px;
+        text-align: right;
+        font-size: 13px;
+        padding-right: 20px;
+        font-weight: normal;
+      }
+      select{
+        width: 80%;
+        height: 30px;
+      }
+    }
+  }
+  .user-message {
+    margin-top: 20px;
+    input{
+      width: 80%;
+      height: 30px;
+      border-radius: 3px;
+      padding-left: 6px;
+      border:1px solid #ccc;
+    }
+  }
+  .tijiao{
+    border: none;
+    width: 100px;
+    line-height: 28px;
+    border-radius: 5px;
+    margin: 50px 0 30px 29%;
+  }
+
+}
+
+.jiance {
+  border: 1px solid #ccc;
+  margin-top: -8px;
+}

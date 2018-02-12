@@ -38,11 +38,11 @@ export class DataService {
     return this.http.get('/data/api/bar/med/type2');
   }
 
-  // getJDKA(pageNum): Observable<any> {
-  //   return this.http.get(`/data/datasource/jkda?limit=1500&offset=${pageNum}`).map(response => {
-  //     return response.json();
-  //   });
-  // }
+  getJDKA(pageNum): Observable<any> {
+    return this.http.get(`/data/datasource/jkda?limit=1500&offset=${pageNum}`).map(response => {
+      return response.json();
+    });
+  }
   // getJDKAName(rowName: any): Observable<any> {
   //   return this.http.get(`/data/datasource/jkda/${rowName}`).map(response => {
   //     return response.json();

@@ -100,8 +100,7 @@
     </div>
   </div>
 
-
-    <div class="data-health">
+  <div class="data-health">
       <div class="care">
         <h1 class="health">丰富易用的解决方案</h1>
         <p>为基层医疗医护人员提供诊所内部临床、运营、医技及供应链、绩效管理运营等服务三大核心————12功能板块</p>
@@ -195,7 +194,6 @@
       <div style="width:100%; height: 50px;"></div>
     </div>
 
-
   <div class="data-content">
     <div class="data-enter">
       <div class="care here">
@@ -245,6 +243,48 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="data-health enter">
+    <div class="care">
+      <h1 class="health" style="font-size: 42px;">开始进入多角色入口</h1>
+      <p style="font-size: 14px;"><a [routerLink]="['/register']" >注册</a> 即可领取40+款产品的免费体验套餐，更有医护人员专属 <a [routerLink]="['/register']">在线医疗服务</a></p>
+      <p style="font-size: 14px;">为您提供最佳上医疗服务实践机会</p>
+    </div>
+
+    <div class="row enter-role">
+      <div class="col-md-6">
+        <div class="doctor">
+          <dl>
+            <dt><img src="/assets/images/favicon.ico" alt=""></dt>
+            <dd>
+              <h3 class="health">一站式全流程的诊所工作站</h3>
+              <p>为基层医疗机构提供一站式人才服务解决方案,为基层医疗机构提供全方位培训解决方案,为基层医疗机构量身打造的一整套管理工具</p>
+            </dd>
+          </dl>
+          <div class="teamwork btn-enter">
+            <button class="btn-primary btn-free" (click)="gotoDoctor()">医生入口</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="doctor">
+          <dl>
+            <dt><img src="/assets/images/heart.jpg" alt=""></dt>
+            <dd>
+              <h3 class="health">以患者为中心</h3>
+              <p>提供诊前、诊中、诊后全流程服务,推送健康提醒，建立良好医患关系,全面的客户关系管理，提高用户留存率</p>
+            </dd>
+          </dl>
+          <div class="teamwork btn-enter">
+            <button class="btn-primary btn-free" (click)="gotoPatient()">患者入口</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:100%; height: 50px;"></div>
   </div>
 
 </div>

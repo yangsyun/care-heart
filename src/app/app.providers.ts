@@ -10,6 +10,10 @@ import {UserStateComponent} from './_layout/user-state/user-state.component';
 import {NavBarComponent} from './_layout/nav-bar/nav-bar.component';
 import {WorkBarComponent} from './_layout/work-bar/work-bar.component';
 import {DataService} from './services/data.service';
+import {DoctorEnterComponent} from './components/doctor-enter/doctor-enter.component';
+import {PatientEnterComponent} from './components/patient-enter/patient-enter.component';
+import {DataTableComponent} from './components/data-table/data-table.component';
+import {MonitorMessageComponent} from './components/monitor-message/monitor-message.component';
 
 export const COMPONENT_PROVIDERS = [
   LoginComponent,
@@ -22,6 +26,10 @@ export const COMPONENT_PROVIDERS = [
   UserStateComponent,
   NavBarComponent,
   WorkBarComponent,
+  DoctorEnterComponent,
+  PatientEnterComponent,
+  DataTableComponent,
+  MonitorMessageComponent,
 
 ];
 export const PIPE_PROVIDERS = [];
