@@ -83,8 +83,8 @@ export class DataTableComponent implements OnInit {
     });
   }
 
-  rowSelect(event) {
-    this.router.navigateByUrl(`data-detail/${event.data.name}`);
+  rowSelect() {
+    this.router.navigateByUrl(`ecg-diagnosis`);
   }
 
 }

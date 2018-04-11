@@ -11,19 +11,16 @@ import { Http } from '@angular/http';
 
 export class HomeComponent implements OnInit {
 
-  currentPic = 0;
-
   data = [];
+  slides = [
+    {image: '/assets/images/1.jpg'},
+    {image: '/assets/images/2.jpg'},
+    {image: '/assets/images/3.jpg'},
+    {image: '/assets/images/4.jpg'}
+  ];
+  noWrapSlides = false;
 
   constructor(private router: Router, public http: Http) {
-    setInterval(() => {
-      const id = (this.currentPic + 1) % 4;
-      this.currentPic = id;
-    }, 3000 );
-  }
-  changebanner(id) {
-    console.log(id);
-    this.currentPic = id;
   }
 
 
@@ -36,9 +33,6 @@ export class HomeComponent implements OnInit {
   gotoPatient() {
     this.router.navigateByUrl('/patient-enter/0');
   }
-
-
-
 
 
 }

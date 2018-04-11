@@ -1,249 +1,19 @@
-<app-layout-header></app-layout-header>
+<app-header></app-header>
 
 
-<div class="main-content">
+<div class="main-content" style="margin-top: 0px;">
 
-  <div class="bannerContainer">
-    <div class="mark"></div>
-    <ul class="bannerPicList">
-      <li [class.active]="currentPic==0"><img src="/assets/images/1.jpg"/><h3>呵护❤️健康 实现新梦想</h3></li>
-      <li [class.active]="currentPic==1"><img src="/assets/images/2.jpg"/><h3>技术到精湛 服务到极致</h3></li>
-      <li [class.active]="currentPic==2"><img src="/assets/images/3.jpg"/><h3>移动互联网 时代全新式</h3></li>
-      <li [class.active]="currentPic==3"><img src="/assets/images/4.jpg"/><h3>一站式流程 诊所工作站</h3></li>
-    </ul>
-    <ul class="bannerBtnList">
-      <li><span class="picBtn" (click)="changebanner(0)"></span></li>
-      <li><span class="picBtn" (click)="changebanner(1)"></span></li>
-      <li><span class="picBtn" (click)="changebanner(2)"></span></li>
-      <li><span class="picBtn" (click)="changebanner(3)"></span></li>
-    </ul>
+  <carousel [noWrap]="noWrapSlides" style="height: 500px">
+    <slide *ngFor="let slide of slides; let index=index" style="height: 500px">
+      <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
 
-  </div>
-
-  <div class="data-content">
-    <div class="kernel">
-      <h2>核心专家</h2>
-      <h5>The Core Experts</h5>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="expert">
-          <div class="hot-order">
-            <a>预约</a>
-          </div>
-
-          <dl class="subscribe">
-            <dt><img src="/assets/images/menzhen.png" alt=""></dt>
-            <dd>
-              <h4>程龙龙</h4>
-              <p>集团核心专家</p>
-            </dd>
-          </dl>
-          <ul class="list-care">
-            <li>解放军总医院内科临床部心血管内科</li>
-            <li>主任医师</li>
-            <li>主任医师、教授</li>
-            <li>擅长快速心律失常的射频消融治疗，包括房颤及室性心律失常在三维指导下的射频消融，以及缓慢心律失常的永久起搏器植入及随访优化，心力衰竭患</li>
-          </ul>
-          <button class="btn-primary btn-know">了解详情</button>
-        </div>
+      <div class="carousel-caption">
+        <!--<h4>Slide {{index}}</h4>-->
+        <p>{{slide.text}}</p>
       </div>
+    </slide>
+  </carousel>
 
-      <div class="col-md-4">
-        <div class="expert">
-          <div class="hot-order">
-            <a>预约</a>
-          </div>
-
-          <dl class="subscribe">
-            <dt><img src="/assets/images/yaoxing.png" alt=""></dt>
-            <dd>
-              <h4>张国庆</h4>
-              <p>集团核心专家</p>
-            </dd>
-          </dl>
-          <ul class="list-care">
-            <li>上海市中心医院</li>
-            <li>心血管病研究所副所长、心脏中心主任</li>
-            <li>主任医师、医学博士后、研究生导师</li>
-            <li>在上海地区最早独立开展室上性心动过速、室性心律失常、房性心动过速、心房扑动、心房颤动等多种心律失常的射频消融治疗</li>
-          </ul>
-          <button class="btn-primary btn-know">了解详情</button>
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="expert">
-          <div class="hot-order">
-            <a>预约</a>
-          </div>
-
-          <dl class="subscribe">
-            <dt><img src="/assets/images/yunzhong.png" alt=""></dt>
-            <dd>
-              <h4>杨建国</h4>
-              <p>集团核心专家</p>
-            </dd>
-          </dl>
-          <ul class="list-care">
-            <li>第二军医大学附属长海医院</li>
-            <li>主任医师</li>
-            <li>主任医师、教授、博士生导师</li>
-            <li>中国医师协会中西医结合分会心血管病专业委员会常委 国际心血管病杂志编委 中华现代内科学杂志编委 第二军医大学学报审稿专家 武汉大学学报医学版</li>
-          </ul>
-          <button class="btn-primary btn-know">了解详情</button>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-  <div class="data-health">
-      <div class="care">
-        <h1 class="health">丰富易用的解决方案</h1>
-        <p>为基层医疗医护人员提供诊所内部临床、运营、医技及供应链、绩效管理运营等服务三大核心————12功能板块</p>
-      </div>
-
-      <div class="row function">
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/zhihui.png" alt=""></dt>
-            <dd>
-              <h2>诊疗管理</h2>
-              <p>专业等诊疗工作站，全流程助力医护工作</p>
-              <ul>
-                <li><img src="/assets/images/1ertong.png" alt="">预约管理</li>
-                <li><img src="/assets/images/8bingli.png" alt="">电子病历管理</li>
-              </ul>
-            </dd>
-          </dl>
-
-        </div>
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/menzhen.png" alt=""></dt>
-            <dd>
-              <h2>诊疗管理</h2>
-              <p>专业等诊疗工作站，全流程助力医护工作</p>
-              <ul>
-                <li><img src="/assets/images/5tijian.png" alt="">辅助诊疗</li>
-                <li><img src="/assets/images/6yiliao.png" alt="">发药收费管理</li>
-              </ul>
-            </dd>
-          </dl>
-
-        </div>
-
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/yaoxing.png" alt=""></dt>
-            <dd>
-              <h2>运营管理</h2>
-              <p>先进等运营模式，全方位提升诊所管理</p>
-              <ul>
-                <li><img src="/assets/images/7gonggong.png" alt="">连锁管理</li>
-                <li><img src="/assets/images/4manxingbing.png" alt="">经营分析统计</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/jiankang.png" alt=""></dt>
-            <dd>
-              <h2>运营管理</h2>
-              <p>先进等运营模式，全方位提升诊所管理</p>
-              <ul>
-                <li><img src="/assets/images/10qita.png" alt="">药品管理</li>
-                <li><img src="/assets/images/9geren.png" alt="">集采平台</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/zhihui.png" alt=""></dt>
-            <dd>
-              <h2>客户管理</h2>
-              <p>全面的客户关系管理，提升用户留存率</p>
-              <ul>
-                <li><img src="/assets/images/3chuanran.png" alt="">会员管理</li>
-                <li><img src="/assets/images/8bingli.png" alt="">电子病历档案管理</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-        <div class="col-md-2">
-          <dl>
-            <dt><img src="/assets/images/jiankang.png" alt=""></dt>
-            <dd>
-              <h2>客户管理</h2>
-              <p>全面的客户关系管理，提升用户留存率</p>
-              <ul>
-                <li><img src="/assets/images/5tijian.png" alt="">随访管理</li>
-                <li><img src="/assets/images/2funv.png" alt="">医患满意度管理</li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
-      </div>
-
-      <div style="width:100%; height: 50px;"></div>
-    </div>
-
-  <div class="data-content">
-    <div class="data-enter">
-      <div class="care here">
-        <h1 class="health">在这里，有你经营所需要的一切</h1>
-        <p>平安万家为您提供更专业的一站式诊所经营解决方案</p>
-      </div>
-      <div class="data-services">
-        <a href="/#/enterprise">
-          <dl>
-            <dt><img src="/assets/home/enterprise.png" alt=""></dt>
-            <dd>万家认证</dd>
-          </dl>
-        </a>
-        <a href="/#/discounts-government">
-          <dl>
-            <dt><img src="/assets/home/government.png" alt=""></dt>
-            <dd>企业服务</dd>
-          </dl>
-        </a>
-        <a href="/#/discounts-people">
-          <dl>
-            <dt><img src="/assets/home/personage.png" alt=""></dt>
-            <dd>医疗保险</dd>
-          </dl>
-        </a>
-        <a href="/#/discounts-company">
-          <dl>
-            <dt><img src="/assets/home/scientific-research.png" alt=""></dt>
-            <dd>商品营销</dd>
-          </dl>
-        </a>
-        <a href="/#/cloud">
-          <dl>
-            <dt><img src="/assets/home/cloud.png" alt=""></dt>
-            <dd>品牌营销</dd>
-          </dl>
-        </a>
-        <a href="/#/security">
-          <dl>
-            <dt><img src="/assets/home/security.png" alt=""></dt>
-            <dd>万家人才</dd>
-          </dl>
-        </a>
-      </div>
-      <div class="teamwork">
-        <button class="btn-primary btn-free">申请合作</button>
-      </div>
-    </div>
-
-  </div>
 
   <div class="data-health enter">
     <div class="care">
@@ -258,12 +28,12 @@
           <dl>
             <dt><img src="/assets/images/favicon.ico" alt=""></dt>
             <dd>
-              <h3 class="health">一站式全流程的诊所工作站</h3>
+              <h3 class="title-heart">一站式全流程的诊所工作站</h3>
               <p>为基层医疗机构提供一站式人才服务解决方案,为基层医疗机构提供全方位培训解决方案,为基层医疗机构量身打造的一整套管理工具</p>
             </dd>
           </dl>
           <div class="teamwork btn-enter">
-            <button class="btn-primary btn-free" (click)="gotoDoctor()">医生入口</button>
+            <button class="btn-default btn-free" (click)="gotoDoctor()">医生入口</button>
           </div>
         </div>
 
@@ -271,14 +41,14 @@
       <div class="col-md-6">
         <div class="doctor">
           <dl>
-            <dt><img src="/assets/images/heart.jpg" alt=""></dt>
+            <dt><img src="/assets/images/xindian.png" alt=""></dt>
             <dd>
-              <h3 class="health">以患者为中心</h3>
+              <h3 class="title-heart">以患者为中心</h3>
               <p>提供诊前、诊中、诊后全流程服务,推送健康提醒，建立良好医患关系,全面的客户关系管理，提高用户留存率</p>
             </dd>
           </dl>
           <div class="teamwork btn-enter">
-            <button class="btn-primary btn-free" (click)="gotoPatient()">患者入口</button>
+            <button class="btn-default btn-free" (click)="gotoPatient()">患者入口</button>
           </div>
         </div>
       </div>
@@ -287,8 +57,233 @@
     <div style="width:100%; height: 50px;"></div>
   </div>
 
+  <!--<div class="data-content">-->
+    <!--<div class="kernel">-->
+      <!--<h2>核心专家</h2>-->
+      <!--<h5>The Core Experts</h5>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-4">-->
+        <!--<div class="expert">-->
+          <!--<div class="hot-order">-->
+            <!--<a>预约</a>-->
+          <!--</div>-->
+
+          <!--<dl class="subscribe">-->
+            <!--<dt><img src="/assets/images/menzhen.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h4>程龙龙</h4>-->
+              <!--<p>集团核心专家</p>-->
+            <!--</dd>-->
+          <!--</dl>-->
+          <!--<ul class="list-care">-->
+            <!--<li>解放军总医院内科临床部心血管内科</li>-->
+            <!--<li>主任医师</li>-->
+            <!--<li>主任医师、教授</li>-->
+            <!--<li>擅长快速心律失常的射频消融治疗，包括房颤及室性心律失常在三维指导下的射频消融，以及缓慢心律失常的永久起搏器植入及随访优化，心力衰竭患</li>-->
+          <!--</ul>-->
+          <!--<button class="btn-primary btn-know">了解详情</button>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="col-md-4">-->
+        <!--<div class="expert">-->
+          <!--<div class="hot-order">-->
+            <!--<a>预约</a>-->
+          <!--</div>-->
+
+          <!--<dl class="subscribe">-->
+            <!--<dt><img src="/assets/images/yaoxing.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h4>张国庆</h4>-->
+              <!--<p>集团核心专家</p>-->
+            <!--</dd>-->
+          <!--</dl>-->
+          <!--<ul class="list-care">-->
+            <!--<li>上海市中心医院</li>-->
+            <!--<li>心血管病研究所副所长、心脏中心主任</li>-->
+            <!--<li>主任医师、医学博士后、研究生导师</li>-->
+            <!--<li>在上海地区最早独立开展室上性心动过速、室性心律失常、房性心动过速、心房扑动、心房颤动等多种心律失常的射频消融治疗</li>-->
+          <!--</ul>-->
+          <!--<button class="btn-primary btn-know">了解详情</button>-->
+        <!--</div>-->
+
+
+      <!--</div>-->
+      <!--<div class="col-md-4">-->
+        <!--<div class="expert">-->
+          <!--<div class="hot-order">-->
+            <!--<a>预约</a>-->
+          <!--</div>-->
+
+          <!--<dl class="subscribe">-->
+            <!--<dt><img src="/assets/images/yunzhong.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h4>杨建国</h4>-->
+              <!--<p>集团核心专家</p>-->
+            <!--</dd>-->
+          <!--</dl>-->
+          <!--<ul class="list-care">-->
+            <!--<li>第二军医大学附属长海医院</li>-->
+            <!--<li>主任医师</li>-->
+            <!--<li>主任医师、教授、博士生导师</li>-->
+            <!--<li>中国医师协会中西医结合分会心血管病专业委员会常委 国际心血管病杂志编委 中华现代内科学杂志编委 第二军医大学学报审稿专家 武汉大学学报医学版</li>-->
+          <!--</ul>-->
+          <!--<button class="btn-primary btn-know">了解详情</button>-->
+        <!--</div>-->
+
+
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="data-content">-->
+    <!--<div class="data-enter">-->
+      <!--<div class="care here">-->
+        <!--<h1 class="health">在这里，有你经营所需要的一切</h1>-->
+        <!--<p>平安万家为您提供更专业的一站式诊所经营解决方案</p>-->
+      <!--</div>-->
+      <!--<div class="data-services">-->
+        <!--<a href="/#/enterprise">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/enterprise.png" alt=""></dt>-->
+            <!--<dd>万家认证</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+        <!--<a href="/#/discounts-government">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/government.png" alt=""></dt>-->
+            <!--<dd>企业服务</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+        <!--<a href="/#/discounts-people">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/personage.png" alt=""></dt>-->
+            <!--<dd>医疗保险</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+        <!--<a href="/#/discounts-company">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/scientific-research.png" alt=""></dt>-->
+            <!--<dd>商品营销</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+        <!--<a href="/#/cloud">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/cloud.png" alt=""></dt>-->
+            <!--<dd>品牌营销</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+        <!--<a href="/#/security">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/home/security.png" alt=""></dt>-->
+            <!--<dd>万家人才</dd>-->
+          <!--</dl>-->
+        <!--</a>-->
+      <!--</div>-->
+      <!--<div class="teamwork">-->
+        <!--<button class="btn-primary btn-free">申请合作</button>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+
+  <!--<div class="data-health">-->
+      <!--<div class="care">-->
+        <!--<h1 class="health">丰富易用的解决方案</h1>-->
+        <!--<p>为基层医疗医护人员提供诊所内部临床、运营、医技及供应链、绩效管理运营等服务三大核心————12功能板块</p>-->
+      <!--</div>-->
+
+      <!--<div class="row function">-->
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/zhihui.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>诊疗管理</h2>-->
+              <!--<p>专业等诊疗工作站，全流程助力医护工作</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/1ertong.png" alt="">预约管理</li>-->
+                <!--<li><img src="/assets/images/8bingli.png" alt="">电子病历管理</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+
+        <!--</div>-->
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/menzhen.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>诊疗管理</h2>-->
+              <!--<p>专业等诊疗工作站，全流程助力医护工作</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/5tijian.png" alt="">辅助诊疗</li>-->
+                <!--<li><img src="/assets/images/6yiliao.png" alt="">发药收费管理</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+
+        <!--</div>-->
+
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/yaoxing.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>运营管理</h2>-->
+              <!--<p>先进等运营模式，全方位提升诊所管理</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/7gonggong.png" alt="">连锁管理</li>-->
+                <!--<li><img src="/assets/images/4manxingbing.png" alt="">经营分析统计</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+        <!--</div>-->
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/jiankang.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>运营管理</h2>-->
+              <!--<p>先进等运营模式，全方位提升诊所管理</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/10qita.png" alt="">药品管理</li>-->
+                <!--<li><img src="/assets/images/9geren.png" alt="">集采平台</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/zhihui.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>客户管理</h2>-->
+              <!--<p>全面的客户关系管理，提升用户留存率</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/3chuanran.png" alt="">会员管理</li>-->
+                <!--<li><img src="/assets/images/8bingli.png" alt="">电子病历档案管理</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+        <!--</div>-->
+        <!--<div class="col-md-2">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/jiankang.png" alt=""></dt>-->
+            <!--<dd>-->
+              <!--<h2>客户管理</h2>-->
+              <!--<p>全面的客户关系管理，提升用户留存率</p>-->
+              <!--<ul>-->
+                <!--<li><img src="/assets/images/5tijian.png" alt="">随访管理</li>-->
+                <!--<li><img src="/assets/images/2funv.png" alt="">医患满意度管理</li>-->
+              <!--</ul>-->
+            <!--</dd>-->
+          <!--</dl>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div style="width:100%; height: 50px;"></div>-->
+    <!--</div>-->
+
 </div>
 
 
-<app-layout-footer></app-layout-footer>
+<app-footer></app-footer>
 

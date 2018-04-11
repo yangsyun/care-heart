@@ -1,7 +1,7 @@
 <div class="top-nav">
   <div style="width: 1200px;margin: 0 auto">
-    <div class="logo">
-      <a href="/#/home" title="返回首页"></a>
+    <div class="head-img">
+      <img src="/assets/images/xin.png" alt="">
     </div>
     <div class="title-style">
       <a href="/#/home">
@@ -84,30 +84,7 @@
                    placeholder="经常使用的邮箱"/><span>*</span>
           </div>
         </div>
-        <div class="form-group">
-          <label class="sr-only" for="address">地址</label>
-          <div class="input-group input-group-clear">
-            <div class="input-group-addon">
-              地 址
-            </div>
-            <input [(ngModel)]="form.address" name="address" type="address" class="form-control" id="address"
-                   placeholder="常住地址或者户口所在地"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="set">账户设置</label>
-          <div class="input-group input-group-clear">
-            <div class="input-group-addon">
-              账户设置
-            </div>
-            <select  class="form-control" name="set" id="set">
-              <option value="正常使用">正常使用</option>
-              <option value="到期作废">到期作废</option>
-              <option value="账户被锁">账户被锁</option>
-              <option value="密码到期">密码到期</option>
-            </select><span>*</span>
-          </div>
-        </div>
+
         <div class="form-group">
           <label class="sr-only" for="role">分配角色</label>
           <div class="input-group input-group-clear">

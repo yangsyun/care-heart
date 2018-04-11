@@ -54,6 +54,11 @@
     font-size: 14px;
   }
 }
+
+
+.view-cont{
+  margin-top: 30px;
+}
 .user-defined {
   border:1px solid #ccc;
   width: 100%;
@@ -132,58 +137,11 @@
     }
   }
 }
-
-.view-cont{
-  margin-top: 30px;
+.btn-show{
+  font-size: 14px;
 }
-.data-preview{
-  width:100%;
-  margin-bottom: 20px;
-  h4{
-    line-height: 60px;
-    font-size: 16px;
-    margin: 0;
-    padding-left: 10px;
-    color: #333;
-    font-weight: bold;
-    position: relative;
-    .btn-add{
-      position: absolute;
-      right: 0;
-      font-size: 12px;
-      background: #0098f6;
-      top:12px;
-    }
-  }
-}
-.operation-sql{
-  margin-top: 20px;
-  width: 100%;
-  .write-sql{
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-  }
-  .operation {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-}
-.heart-img{
-  width: 100%;
-  height: 600px;
-  img{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.analyze{
-  margin-top: 20px;
-  button{
-    margin-left: 18%;
-    background: #0098f6;
-  }
+.btn-show:hover{
+  color: #0A77BD;
 }
 .grid-table{
   overflow: hidden;
@@ -245,7 +203,7 @@
 .table-more{
   height: 500px;
   .table-data{
-    width: 1252px;
+    width: 1153px;
     tr, td {
       width: 150px;
     }
@@ -257,25 +215,4 @@
     }
   }
 }
-.medical-image {
-  width: 100%;
-  height: 100px;
-  dl{
-    float: left;
-    width: 23%;
-    margin-right: 2%;
-    dt{
-      width: 160px;
-      height: 135px;
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-    dd{
-      text-align: center;
-      height: 30px;
-      line-height: 30px;
-    }
-  }
-}
+

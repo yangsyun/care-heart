@@ -1,6 +1,6 @@
 <app-layout-header></app-layout-header>
 
-<div class="main-content" style="margin-top: 60px">
+<div class="main-content" style="margin-top: 0px">
 
   <div class="data-content">
     <div class="container-fluid">
@@ -19,13 +19,9 @@
                 <div id="collapseOne" class="panel-collapse in" style="height: auto;">
                   <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked">
-                      <li [ngStyle]="getStyle(flag00)" (click)="showContent(0)"><a><img src="/assets/images/guanli.png">患者管理</a></li>
-                      <li [ngStyle]="getStyle(flag01)" (click)="showContent(1)"><a><img src="/assets/images/8bingli.png">待诊患者管理</a></li>
-                      <li [ngStyle]="getStyle(flag02)" (click)="showContent(2)"><a><img src="/assets/images/shangchuan.png">上传数据</a></li>
-                      <li [ngStyle]="getStyle(flag03)" (click)="showContent(3)"><a><img src="/assets/images/5tijian.png">心电诊断</a></li>
-                      <li [ngStyle]="getStyle(flag04)" (click)="showContent(4)"><a><img src="/assets/images/jiance.png">监测记录</a></li>
-                      <li [ngStyle]="getStyle(flag05)" (click)="showContent(5)"><a><img src="/assets/images/tongji.png">统计报表</a></li>
-                      <li><a>更多 >></a></li>
+                      <li [ngStyle]="getStyle(flag00)" (click)="showContent(0)"><a><img src="/assets/images/8bingli.png">待诊患者条目</a></li>
+                      <li [ngStyle]="getStyle(flag01)" (click)="showContent(1)"><a><img src="/assets/images/guanli.png">患者管理</a></li>
+
                     </ul>
                   </div>
 
@@ -70,6 +66,17 @@
           </div>
           <div *ngIf="flag00" class="view-cont">
             <div class="data-preview">
+              <h4>待诊患者列表:</h4>
+              <div *ngIf="showTable">
+                <app-data-table></app-data-table>
+              </div>
+              <div *ngIf="!showTable">
+                正在加载，请稍后...
+              </div>
+            </div>
+          </div>
+          <div *ngIf="flag01" class="view-cont">
+            <div class="data-preview">
               <h4>患者列表:<button class="btn btn-primary btn-add"> + 添加</button></h4>
               <div class="grid-table table-more">
                 <div>
@@ -93,7 +100,7 @@
                       <td>1968-9-11</td>
                       <td>海外/毛里求斯</td>
                       <td>男</td>
-                      <td><a href="/#/monitor-message">+ 添加监测记录</a></td>
+                      <td><a href="/#/monitoring-record">查看患者历史记录</a></td>
                     </tr>
                     <tr class="table-cont">
                       <td>2</td>
@@ -102,24 +109,12 @@
                       <td>1978-12-01</td>
                       <td>上海/南京</td>
                       <td>男</td>
-                      <td><a href="/#/monitor-message">+ 添加监测记录</a></td>
+                      <td><a href="/#/monitor-message">查看患者历史记录</a></td>
                     </tr>
 
                     </tbody>
                   </table>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div *ngIf="flag01" class="view-cont">
-            <div class="data-preview">
-              <h4>待诊患者列表:</h4>
-              <div *ngIf="showTable">
-                <app-data-table></app-data-table>
-              </div>
-              <div *ngIf="!showTable">
-                正在加载，请稍后...
               </div>
             </div>
           </div>
@@ -135,200 +130,6 @@
             </div>
           </div>
 
-          <div *ngIf="flag03" class="view-cont">
-            <h4>待诊断条目——心电图</h4>
-           <div class="heart-img">
-             <img src="/assets/images/xindiantu.jpg" alt="">
-           </div>
-
-            <div class="summary">
-              <h4>诊断分析总结</h4>
-              <textarea>胸廓左右对称，所示骨骼未见骨质异常；两肺纹理走向分布规则；两肺野清晰，双侧肺门大小、形态未见异常；纵隔影未见增宽， 心影未见增大；两侧膈肌高度相称，表面光整，双侧肋膈角锐利。</textarea>
-            </div>
-            <div class="analyze">
-              <button class="btn btn-primary">保存</button>
-              <button class="btn btn-primary">重新分析</button>
-              <button class="btn btn-primary">报告预览</button>
-            </div>
-          </div>
-
-          <div *ngIf="flag04" class="view-cont">
-            <h4>监测记录</h4>
-            <div class="grid-table table-more">
-              <div>
-                <table class="table-data">
-                  <thead class="table-nav">
-                  <tr class="table-header">
-                    <th>序号</th>
-                    <th>自定义标题</th>
-                    <th>自定义描述</th>
-                    <th>数据集类型</th>
-                    <th>创建时间</th>
-                    <th>修改时间</th>
-                    <th>操作</th>
-                  </tr>
-                  </thead>
-                  <tbody class="table-nav">
-                  <tr class="table-cont">
-                    <td>1</td>
-                    <td>药物竞品分析</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td>
-                      <button class="btn btn-default" style="margin-right: 10px" (click)="showContent(0)">查看</button>
-                      <button class="btn btn-default" style="margin-right: 10px"><a href="/#/modify-data">修改</a></button>
-                      <button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>2</td>
-                    <td>政府报表</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/16 10:22:03</td>
-                    <td>2017/12/16 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>3</td>
-                    <td>医疗影像辅助读片</td>
-                    <td>测试使用</td>
-                    <td>影像数据</td>
-                    <td>2017/12/14 11:22:03</td>
-                    <td>2017/12/15 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>4</td>
-                    <td>保险公司骗保分析</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/13 2:22:03</td>
-                    <td>2017/12/14 10:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>5</td>
-                    <td>其他自定义</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>6</td>
-                    <td>药物竞品分析数据集</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>7</td>
-                    <td>政府报表</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div *ngIf="flag05" class="view-cont">
-            <h4>统计报表</h4>
-            <div class="grid-table table-more">
-              <div>
-                <table class="table-data">
-                  <thead class="table-nav">
-                  <tr class="table-header">
-                    <th>序号</th>
-                    <th>自定义标题</th>
-                    <th>自定义描述</th>
-                    <th>数据集类型</th>
-                    <th>创建时间</th>
-                    <th>修改时间</th>
-                    <th>操作</th>
-                  </tr>
-                  </thead>
-                  <tbody class="table-nav">
-                  <tr class="table-cont">
-                    <td>1</td>
-                    <td>药物竞品分析</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td>
-                      <button class="btn btn-default" style="margin-right: 10px" (click)="showContent(0)">查看</button>
-                      <button class="btn btn-default" style="margin-right: 10px"><a href="/#/modify-data">修改</a></button>
-                      <button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>2</td>
-                    <td>政府报表</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/16 10:22:03</td>
-                    <td>2017/12/16 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>3</td>
-                    <td>医疗影像辅助读片</td>
-                    <td>测试使用</td>
-                    <td>影像数据</td>
-                    <td>2017/12/14 11:22:03</td>
-                    <td>2017/12/15 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>4</td>
-                    <td>保险公司骗保分析</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/13 2:22:03</td>
-                    <td>2017/12/14 10:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>5</td>
-                    <td>其他自定义</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>6</td>
-                    <td>药物竞品分析数据集</td>
-                    <td>测试使用</td>
-                    <td>结构化数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  <tr class="table-cont">
-                    <td>7</td>
-                    <td>政府报表</td>
-                    <td>测试使用</td>
-                    <td>文档数据</td>
-                    <td>2017/12/17 12:22:03</td>
-                    <td>2017/12/17 12:25:03</td>
-                    <td><button class="btn btn-default" style="margin-right: 10px">查看</button><button class="btn btn-default"  style="margin-right: 10px">修改</button><button class="btn btn-default">删除</button></td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
 
         </div>
 
@@ -344,4 +145,4 @@
 </div>
 
 
-<app-layout-footer></app-layout-footer>
+<app-footer></app-footer>
