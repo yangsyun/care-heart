@@ -1,6 +1,6 @@
 <app-layout-header></app-layout-header>
 
-<div class="main-content" style="margin-top: 0px">
+<div class="main-content">
 
   <div class="data-content">
     <div class="container-fluid">
@@ -9,7 +9,7 @@
           <div style="width: 100%;">
             <div class="panel-group" id="accordion2">
               <div class="panel-heading">
-                <strong style="font-size: 24px;">医生诊断明细</strong>
+                <h3 style="font-size: 24px;">医生诊断明细</h3>
               </div>
 
               <div class="panel panel-default">
@@ -19,9 +19,8 @@
                 <div id="collapseOne" class="panel-collapse in" style="height: auto;">
                   <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked">
-                      <li [ngStyle]="getStyle(flag00)" (click)="showContent(0)"><a><img src="/assets/images/8bingli.png">待诊患者条目</a></li>
-                      <li [ngStyle]="getStyle(flag01)" (click)="showContent(1)"><a><img src="/assets/images/guanli.png">患者管理</a></li>
-
+                      <li [ngStyle]="getStyle(flag00)" (click)="showContent(0)"><a><img src="/assets/images/guanli.png">待诊患者条目</a></li>
+                      <li [ngStyle]="getStyle(flag01)" (click)="showContent(1)"><a><img src="/assets/images/8bingli.png">患者管理</a></li>
                     </ul>
                   </div>
 
@@ -38,32 +37,8 @@
               <button class="btn btn-primary btn-ask"><a href="/#/apply-cloud" style="color: #fff">门(急)诊挂号系统</a></button>
               <button class="btn btn-primary btn-ask"><a href="/#/great-group" style="color: #fff">住院管理系统</a></button>
             </div>
-            <div class="user-defined">
-              <h4>医生诊断明细 <span>X 关闭</span></h4>
-              <ul class="liucheng">
-                <li>
-                  <a><img src="/assets/images/one.png">患者管理</a><img src="/assets/images/jiantouji.png">
-                 </li>
-
-                <li>
-                  <a><img src="/assets/images/two.png">上传数据</a><img src="/assets/images/jiantouji.png">
-                </li>
-
-                <li>
-                  <a><img src="/assets/images/three.png">心电诊断</a><img src="/assets/images/jiantouji.png">
-                </li>
-
-                <li>
-                  <a><img src="/assets/images/four.png">监测记录</a><img src="/assets/images/jiantouji.png">
-                </li>
-
-                <li>
-                  <a><img src="/assets/images/five.png">️统计报表</a>
-                </li>
-              </ul>
-            </div>
-
           </div>
+
           <div *ngIf="flag00" class="view-cont">
             <div class="data-preview">
               <h4>待诊患者列表:</h4>
@@ -75,6 +50,7 @@
               </div>
             </div>
           </div>
+
           <div *ngIf="flag01" class="view-cont">
             <div class="data-preview">
               <h4>患者列表:<button class="btn btn-primary btn-add"> + 添加</button></h4>
@@ -120,7 +96,6 @@
           </div>
 
           <div *ngIf="flag02" class="view-cont" >
-
             <div class="data-preview mysql" style="height: 600px">
               <h4>上传数据：</h4>
               <div class="operation-sql">
@@ -130,13 +105,10 @@
             </div>
           </div>
 
-
         </div>
 
       </div>
     </div>
-
-
 
   </div>
 

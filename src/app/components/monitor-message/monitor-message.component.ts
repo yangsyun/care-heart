@@ -13,6 +13,6 @@ export class MonitorMessageComponent implements OnInit {
   ngOnInit() {
   }
   cancel() {
-    this.router.navigateByUrl('doctor-enter/0');
+    this.router.navigateByUrl('monitoring-record');
   }
 }

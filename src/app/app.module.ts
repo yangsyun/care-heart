@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-import {AccordionModule, CarouselModule} from 'ngx-bootstrap';
+import {AccordionModule, CarouselConfig, CarouselModule} from 'ngx-bootstrap';
 import {COMPONENT_PROVIDERS, PIPE_PROVIDERS, SERVICE_PROVIDERS} from './app.providers';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
@@ -34,6 +34,7 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
   providers: [
     SERVICE_PROVIDERS,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
+    { provide: CarouselConfig, useValue: { interval: 3000, noPause: true, showIndicators: true } }
   ],
   bootstrap: [AppComponent]
 })

@@ -3,53 +3,123 @@
 
 <div class="main-content" style="margin-top: 0px;">
 
-  <carousel [noWrap]="noWrapSlides" style="height: 500px">
-    <slide *ngFor="let slide of slides; let index=index" style="height: 500px">
-      <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
+  <!--<carousel [noWrap]="noWrapSlides" style="height: 500px">-->
+    <!--<slide *ngFor="let slide of slides; let index=index" style="height: 500px">-->
+      <!--<img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">-->
+      <!--<div class="">-->
+        <!--<button class="btn btn-primary">医生入口</button>-->
+        <!--<button class="btn btn-primary">患者入口</button>-->
+      <!--</div>-->
+      <!--<div class="carousel-caption">-->
+       <!---->
+        <!--<p>{{slide.text}}</p>-->
+      <!--</div>-->
+    <!--</slide>-->
+  <!--</carousel>-->
 
-      <div class="carousel-caption">
-        <!--<h4>Slide {{index}}</h4>-->
-        <p>{{slide.text}}</p>
+
+  <carousel>
+    <slide>
+      <img src="assets/images/1.jpg" alt="First slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
+      <div class="carousel-caption carousel-list">
+        <h3 style="font-size: 44px;">您的心脏健康管理专家</h3>
+        <p style="margin-top: 40px">
+          <a><i>帮助发现心脏病</i></a>
+          <a><i>帮助跟踪病情及疗效</i></a>
+          <a><i>帮助预测疾病突发风险</i></a>
+          <a><i>捕捉异常供就医参考</i></a>
+        </p>
       </div>
+
+      <div class="carousel-caption carousel-btn">
+        <button class="btn btn-default" (click)="gotoDoctor()">医生入口</button>
+        <button class="btn btn-default" (click)="gotoPatient()">患者入口</button>
+      </div>
+    </slide>
+    <slide>
+      <img src="assets/images/2.jpg" alt="Second slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
+    </slide>
+    <slide>
+      <img src="assets/images/3.jpg" alt="Third slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
+    </slide>
+    <slide>
+      <img src="assets/images/4.jpg" alt="Third slide" style="display: block; width: 100%; height: 500px;background-size: 100% 100%;">
     </slide>
   </carousel>
 
-
-  <div class="data-health enter">
-    <div class="care">
-      <h1 class="health" style="font-size: 42px;">开始进入多角色入口</h1>
-      <p style="font-size: 14px;"><a [routerLink]="['/register']" >注册</a> 即可领取40+款产品的免费体验套餐，更有医护人员专属 <a [routerLink]="['/register']">在线医疗服务</a></p>
-      <p style="font-size: 14px;">为您提供最佳上医疗服务实践机会</p>
+  <div class="data-content">
+    <div class="kernel">
+      <h2>核心平台</h2>
+      <h5>The Core Platform</h5>
     </div>
-
     <div class="row enter-role">
-      <div class="col-md-6">
-        <div class="doctor">
-          <dl>
-            <dt><img src="/assets/images/favicon.ico" alt=""></dt>
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>查看</a>
+          </div>
+
+          <dl class="subscribe">
+            <dt><img src="/assets/images/menzhen.png" alt=""></dt>
             <dd>
-              <h3 class="title-heart">一站式全流程的诊所工作站</h3>
-              <p>为基层医疗机构提供一站式人才服务解决方案,为基层医疗机构提供全方位培训解决方案,为基层医疗机构量身打造的一整套管理工具</p>
+              <h4>心电设备</h4>
+              <p>集团核心产品</p>
             </dd>
           </dl>
-          <div class="teamwork btn-enter">
-            <button class="btn-default btn-free" (click)="gotoDoctor()">医生入口</button>
+          <ul class="list-care">
+            <li>健康级心电设备</li>
+            <li>医疗级心电设备</li>
+            <li>静态心电图机(ECG)</li>
+            <li>动态心电图机()Holter</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>查看</a>
           </div>
+
+          <dl class="subscribe">
+            <dt><img src="/assets/images/shouji.jpg" alt=""></dt>
+            <dd>
+              <h4>手机客户端</h4>
+              <p>集团核心平台</p>
+            </dd>
+          </dl>
+          <ul class="list-care">
+            <li>手机客户端就是可以在手机终端运行的软件</li>
+            <li>是无线互联网行业中一个重点发展的项目</li>
+            <li>以手机客户端产生的产业同样发展迅猛</li>
+            <li>企业可以无需依赖手机媒体、手机应用即可自己实现便捷、有效的移动营销。</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
         </div>
 
+
       </div>
-      <div class="col-md-6">
-        <div class="doctor">
-          <dl>
-            <dt><img src="/assets/images/xindian.png" alt=""></dt>
+      <div class="col-md-4">
+        <div class="expert">
+          <div class="hot-order">
+            <a>查看</a>
+          </div>
+
+          <dl class="subscribe">
+            <dt><img src="/assets/images/yunzhong.png" alt=""></dt>
             <dd>
-              <h3 class="title-heart">以患者为中心</h3>
-              <p>提供诊前、诊中、诊后全流程服务,推送健康提醒，建立良好医患关系,全面的客户关系管理，提高用户留存率</p>
+              <h4>云平台管理</h4>
+              <p>平台管理中心</p>
             </dd>
           </dl>
-          <div class="teamwork btn-enter">
-            <button class="btn-default btn-free" (click)="gotoPatient()">患者入口</button>
-          </div>
+          <ul class="list-care">
+            <li>软件即服务,SaaS应用是完全在“云”里</li>
+            <li>附着服务（Attached services）</li>
+            <li>平台一般模型</li>
+            <li>户内到云平台，云服务平台</li>
+          </ul>
+          <button class="btn-primary btn-know">了解详情</button>
         </div>
       </div>
     </div>
@@ -57,84 +127,45 @@
     <div style="width:100%; height: 50px;"></div>
   </div>
 
-  <!--<div class="data-content">-->
-    <!--<div class="kernel">-->
-      <!--<h2>核心专家</h2>-->
-      <!--<h5>The Core Experts</h5>-->
+  <!--<div class="data-health enter">-->
+    <!--<div class="care">-->
+      <!--<h1 class="health" style="font-size: 42px;">开始进入多角色入口</h1>-->
+      <!--<p style="font-size: 14px;"><a [routerLink]="['/register']" >注册</a> 即可领取40+款产品的免费体验套餐，更有医护人员专属 <a [routerLink]="['/register']">在线医疗服务</a></p>-->
+      <!--<p style="font-size: 14px;">为您提供最佳上医疗服务实践机会</p>-->
     <!--</div>-->
-    <!--<div class="row">-->
-      <!--<div class="col-md-4">-->
-        <!--<div class="expert">-->
-          <!--<div class="hot-order">-->
-            <!--<a>预约</a>-->
-          <!--</div>-->
 
-          <!--<dl class="subscribe">-->
-            <!--<dt><img src="/assets/images/menzhen.png" alt=""></dt>-->
+    <!--<div class="row enter-role">-->
+      <!--<div class="col-md-6">-->
+        <!--<div class="doctor">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/favicon.ico" alt=""></dt>-->
             <!--<dd>-->
-              <!--<h4>程龙龙</h4>-->
-              <!--<p>集团核心专家</p>-->
+              <!--<h3 class="title-heart">一站式全流程的诊所工作站</h3>-->
+              <!--<p>为基层医疗机构提供一站式人才服务解决方案,为基层医疗机构提供全方位培训解决方案,为基层医疗机构量身打造的一整套管理工具</p>-->
             <!--</dd>-->
           <!--</dl>-->
-          <!--<ul class="list-care">-->
-            <!--<li>解放军总医院内科临床部心血管内科</li>-->
-            <!--<li>主任医师</li>-->
-            <!--<li>主任医师、教授</li>-->
-            <!--<li>擅长快速心律失常的射频消融治疗，包括房颤及室性心律失常在三维指导下的射频消融，以及缓慢心律失常的永久起搏器植入及随访优化，心力衰竭患</li>-->
-          <!--</ul>-->
-          <!--<button class="btn-primary btn-know">了解详情</button>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="col-md-4">-->
-        <!--<div class="expert">-->
-          <!--<div class="hot-order">-->
-            <!--<a>预约</a>-->
+          <!--<div class="teamwork btn-enter">-->
+            <!--<button class="btn-default btn-free">医生入口</button>-->
           <!--</div>-->
-
-          <!--<dl class="subscribe">-->
-            <!--<dt><img src="/assets/images/yaoxing.png" alt=""></dt>-->
-            <!--<dd>-->
-              <!--<h4>张国庆</h4>-->
-              <!--<p>集团核心专家</p>-->
-            <!--</dd>-->
-          <!--</dl>-->
-          <!--<ul class="list-care">-->
-            <!--<li>上海市中心医院</li>-->
-            <!--<li>心血管病研究所副所长、心脏中心主任</li>-->
-            <!--<li>主任医师、医学博士后、研究生导师</li>-->
-            <!--<li>在上海地区最早独立开展室上性心动过速、室性心律失常、房性心动过速、心房扑动、心房颤动等多种心律失常的射频消融治疗</li>-->
-          <!--</ul>-->
-          <!--<button class="btn-primary btn-know">了解详情</button>-->
         <!--</div>-->
-
 
       <!--</div>-->
-      <!--<div class="col-md-4">-->
-        <!--<div class="expert">-->
-          <!--<div class="hot-order">-->
-            <!--<a>预约</a>-->
-          <!--</div>-->
-
-          <!--<dl class="subscribe">-->
-            <!--<dt><img src="/assets/images/yunzhong.png" alt=""></dt>-->
+      <!--<div class="col-md-6">-->
+        <!--<div class="doctor">-->
+          <!--<dl>-->
+            <!--<dt><img src="/assets/images/xindian.png" alt=""></dt>-->
             <!--<dd>-->
-              <!--<h4>杨建国</h4>-->
-              <!--<p>集团核心专家</p>-->
+              <!--<h3 class="title-heart">以患者为中心</h3>-->
+              <!--<p>提供诊前、诊中、诊后全流程服务,推送健康提醒，建立良好医患关系,全面的客户关系管理，提高用户留存率</p>-->
             <!--</dd>-->
           <!--</dl>-->
-          <!--<ul class="list-care">-->
-            <!--<li>第二军医大学附属长海医院</li>-->
-            <!--<li>主任医师</li>-->
-            <!--<li>主任医师、教授、博士生导师</li>-->
-            <!--<li>中国医师协会中西医结合分会心血管病专业委员会常委 国际心血管病杂志编委 中华现代内科学杂志编委 第二军医大学学报审稿专家 武汉大学学报医学版</li>-->
-          <!--</ul>-->
-          <!--<button class="btn-primary btn-know">了解详情</button>-->
+          <!--<div class="teamwork btn-enter">-->
+            <!--<button class="btn-default btn-free" (click)="gotoPatient()">患者入口</button>-->
+          <!--</div>-->
         <!--</div>-->
-
-
       <!--</div>-->
     <!--</div>-->
+
   <!--</div>-->
 
   <!--<div class="data-content">-->

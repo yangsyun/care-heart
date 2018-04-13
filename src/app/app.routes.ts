@@ -6,9 +6,10 @@ import {DoctorEnterComponent} from './components/doctor-enter/doctor-enter.compo
 import {PatientEnterComponent} from './components/patient-enter/patient-enter.component';
 import {DataTableComponent} from './components/data-table/data-table.component';
 import {MonitorMessageComponent} from './components/monitor-message/monitor-message.component';
-import {EcgDiagnosisComponent} from "./components/ecg-diagnosis/ecg-diagnosis.component";
-import {MonitoringRecordComponent} from "./components/monitoring-record/monitoring-record.component";
-import {HistoryDiagnoseComponent} from "./components/history-diagnose/history-diagnose.component";
+import {EcgDiagnosisComponent} from './components/ecg-diagnosis/ecg-diagnosis.component';
+import {MonitoringRecordComponent} from './components/monitoring-record/monitoring-record.component';
+import {HistoryDiagnoseComponent} from './components/history-diagnose/history-diagnose.component';
+import {PatientRecordComponent} from './components/patient-record/patient-record.component';
 
 export const ROUTES: Routes = [
   {
@@ -56,5 +57,8 @@ export const ROUTES: Routes = [
     path: 'history-diagnose',
     component:  HistoryDiagnoseComponent,
   },
-
+  {
+    path: 'patient-record',
+    component: PatientRecordComponent,
+  },
 ];

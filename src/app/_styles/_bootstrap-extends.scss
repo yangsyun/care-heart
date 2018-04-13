@@ -130,38 +130,13 @@ a:hover{
   content: "\e01e";
 }
 
-h1, h2, h3, h4, h5 {
-  -webkit-font-smoothing: initial;
-}
-
-.input-group.input-group-clear {
-  > .input-group-addon {
-    background: none;
-    border: none;
-    color: white;
-  }
-  > .form-control {
-    background: none;
-    border: none;
-    color: white;
-  }
-  border-bottom: 1px solid white;
-}
-
-.card.card-clear {
-  background: none;
-}
-
 h1 {
   font-size: 24px;
   line-height: 1.375;
   margin: 0;
 }
-
-.btn.btn-lg {
-  font-size: 1rem;
-  padding-top: 18px;
-  padding-bottom: 18px;
+h1, h2, h3, h4, h5 {
+  -webkit-font-smoothing: initial;
 }
 
 .modal-dialog {
@@ -231,55 +206,73 @@ h1 {
   overflow: hidden;
 }
 
-.grid-table{
-  overflow: hidden;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  height: 400px;
-  border:1px solid #ccc;
-}
-.table-data{
-  border:1px solid #ccc;
-  box-shadow: 1px 1px 1px 0;
-  overflow: hidden;
-  .table-nav{
-    margin:0;
-    padding: 0;
-    tr{
-      &:nth-child(2n){
-        background: #f6f7f8;
-      }
-    }
-    th,td{
-      width:150px;
-      list-style: none;
-      float: left;
-      border-right:1px solid #ddd;
-      line-height:40px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      padding-left: 10px;
-      text-align: center;
-      &:nth-last-of-type(1){
-        border-right: none;
-      }
-    }
-  }
-}
-.table-header{
-  color: #333;
-  background: #d5e6f1;
-}
-.table-cont {
-  border-bottom: 1px solid #d5e6f1;
 
-  td{
-    &:hover{
-      cursor: pointer;
-    }
+.input-group {
+  position: relative;
+  display: inline-table;
+  vertical-align: middle;
+  border-collapse: separate;
+  width: 86%;
+  color: #4a4a4a;
+  border: 1px solid #397cd5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.input-group .form-control {
+  padding: 7px 10px;
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #000;
+}
+.input-group.input-group-clear {
+  border-bottom:1px solid #397cd5;
+}
+.input-group.input-group-clear {
+  > .input-group-addon {
+    background: none;
+    border: none;
+    color: white;
+  }
+  > .form-control {
+    background: none;
+    border: none;
+    color: white;
+  }
+  border-bottom: 1px solid white;
+}
+.input-group-addon {
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 10px;
+}
+.btn-login:hover{
+  cursor: pointer;
+}
+.form-user{
+  text-align: left;
+}
+.content {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 3rem;
+  .btn-login {
+    font-size: 14px;
+    height: 48px;
+    width: 86%;
+    margin-left: 7%;
   }
 }
+
 
 .top-nav{
   height: 50px;
@@ -332,58 +325,157 @@ h1 {
   margin-top: 3%;
 }
 
-.input-group {
-  position: relative;
-  display: inline-table;
-  vertical-align: middle;
-  border-collapse: separate;
-  width: 86%;
-  color: #4a4a4a;
-  border: 1px solid #397cd5;
-  border-radius: 4px;
-  box-sizing: border-box;
+.main-content{
+  background: #fff;
 }
-.input-group .form-control {
-  padding: 7px 10px;
-  display: table-cell;
-  vertical-align: middle;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 20px;
-  outline: none;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #000;
+.data-content{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
-
-.input-group.input-group-clear {
-  border-bottom:1px solid #397cd5;
-}
-.input-group-addon {
-  display: table-cell;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: center;
-  padding: 0 10px;
-}
-
-.btn-login:hover{
-  cursor: pointer;
-}
-.form-user{
-  text-align: left;
-}
-.content {
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 3rem;
-  .btn-login {
-    font-size: 14px;
-    height: 48px;
-    width: 86%;
-    margin-left: 7%;
+.panel-default {
+  .panel-heading{
+    background: #0A77BD;
+    line-height: 40px;
+    padding-left: 15px;
+    a{
+      color: #fff;
+      font-size: 13px;
+    }
+  }
+  .panel-body{
+    padding: 0;
+    .nav-stacked{
+      li{
+        border:1px solid #ccc;
+        width: 100%;
+        line-height: 40px;
+        padding-left: 15px;
+        margin-bottom: 1px;
+        font-size: 12px;
+        color: #337ab7;
+        &:hover{
+          background: #efefef;
+        }
+      }
+      img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 }
+.view-header {
+  margin-top: 2%;
+  height: 30px;
+}
+.your-need {
+  width: 28%;
+  float: right;
+  .btn-ask{
+    background: #0098F6;
+    border:none;
+    font-size: 14px;
+  }
+}
+.view-cont{
+  margin-top: 30px;
+  h3{
+    position: relative;
+    height: 40px;
+    font-size: 22px;
+    button{
+      position: absolute;
+      right: 12px;
+      font-size: 13px;
+      border:none;
+      background: #228ff1;
+    }
+  }
+}
+.data-preview{
+  width:100%;
+  margin-bottom: 20px;
+  h4{
+    line-height: 60px;
+    font-size: 16px;
+    margin: 0;
+    padding-left: 10px;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    .btn-add{
+      position: absolute;
+      right: 0;
+      top: 14px;
+      background: #0098F6;
+      border: none;
+      font-size: 12px;
+    }
+  }
+}
+.grid-table{
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 400px;
+  border:1px solid #ccc;
+}
+.table-data{
+  border:1px solid #ccc;
+  box-shadow: 1px 1px 1px 0;
+  overflow: hidden;
+  .table-nav{
+    margin:0;
+    padding: 0;
+    tr{
+      &:nth-child(2n){
+        background: #f6f7f8;
+      }
+    }
+    th,td{
+      width:150px;
+      list-style: none;
+      float: left;
+      border-right:1px solid #ddd;
+      line-height:40px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-left: 10px;
+      text-align: center;
+      &:nth-last-of-type(1){
+        border-right: none;
+      }
+    }
+  }
+}
+.table-header{
+  color: #333;
+  background: #d5e6f1;
+}
+.table-cont {
+  border-bottom: 1px solid #d5e6f1;
+  td{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+.table-more{
+  height: 500px;
+  .table-data{
+    width: 1102px;
+    tr, td {
+      width: 150px;
+    }
+    tr:last-of-type{
+      width: 200px;
+    }
+    td:last-of-type{
+      width: 200px;
+    }
+  }
+}
+

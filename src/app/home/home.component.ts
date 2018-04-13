@@ -12,13 +12,7 @@ import { Http } from '@angular/http';
 export class HomeComponent implements OnInit {
 
   data = [];
-  slides = [
-    {image: '/assets/images/1.jpg'},
-    {image: '/assets/images/2.jpg'},
-    {image: '/assets/images/3.jpg'},
-    {image: '/assets/images/4.jpg'}
-  ];
-  noWrapSlides = false;
+
 
   constructor(private router: Router, public http: Http) {
   }
