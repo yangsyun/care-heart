@@ -19,7 +19,6 @@ import {Ng2SmartTableModule} from 'ng2-smart-table';
     ...COMPONENT_PROVIDERS,
     ...PIPE_PROVIDERS,
 
-
   ],
   imports: [
     BrowserModule,

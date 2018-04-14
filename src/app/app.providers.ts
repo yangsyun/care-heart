@@ -16,6 +16,7 @@ import {EcgDiagnosisComponent} from './components/ecg-diagnosis/ecg-diagnosis.co
 import {MonitoringRecordComponent} from './components/monitoring-record/monitoring-record.component';
 import {HistoryDiagnoseComponent} from './components/history-diagnose/history-diagnose.component';
 import {PatientRecordComponent} from './components/patient-record/patient-record.component';
+import {EcgShowComponent} from './components/ecg-show/ecg-show.component';
 
 export const COMPONENT_PROVIDERS = [
   LoginComponent,
@@ -34,6 +35,7 @@ export const COMPONENT_PROVIDERS = [
   MonitoringRecordComponent,
   HistoryDiagnoseComponent,
   PatientRecordComponent,
+  EcgShowComponent,
 ];
 export const PIPE_PROVIDERS = [];
 

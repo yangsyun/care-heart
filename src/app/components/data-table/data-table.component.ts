@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../services/data.service';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-data-table',
@@ -85,6 +85,7 @@ export class DataTableComponent implements OnInit {
 
   rowSelect() {
     this.router.navigateByUrl(`ecg-diagnosis`);
+
   }
 
 }
