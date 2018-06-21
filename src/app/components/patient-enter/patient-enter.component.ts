@@ -68,7 +68,5 @@ export class PatientEnterComponent implements OnInit {
     };
   }
 
-  enter() {
-    this.router.navigateByUrl(`extraction-data`);
-  }
+  
 }

@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class DataTableComponent implements OnInit {
 
-  dimoTypes = [];
+  dimoTypes = ['FN999', 'CADRDA10999', '2017-12-22 14:20', '2017-12-22 16:20', '1', '20', '男', '预览'];
   settings = {
     actions: {
       add: false,
@@ -72,15 +72,17 @@ export class DataTableComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
-    this.dataService.getJDKA('0').subscribe(response => {
-      this.dimoTypes = response.rows;
-      this.dimoTypes.forEach(dimType => {
-        dimType['dataname'] = 'jkda';
-        dimType['datatype'] = 'mysql';
-        dimType['operation'] = '预览';
-        dimType['sex'] = '男';
-      });
-    });
+
+    console.log(this.dimoTypes);
+    // this.dataService.getJDKA('0').subscribe(response => {
+    //   this.dimoTypes = response.rows;
+    //   this.dimoTypes.forEach(dimType => {
+    //     dimType['dataname'] = 'jkda';
+    //     dimType['datatype'] = 'mysql';
+    //     dimType['operation'] = '预览';
+    //     dimType['sex'] = '男';
+    //   });
+    // });
   }
 
   rowSelect() {

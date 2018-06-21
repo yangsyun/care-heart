@@ -93,8 +93,5 @@ export class DoctorEnterComponent implements OnInit {
     };
   }
 
-  enter() {
-    this.router.navigateByUrl(`extraction-data`);
-  }
 
 }

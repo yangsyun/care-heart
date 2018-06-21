@@ -14,10 +14,17 @@ var current_times = 0;
 var hits = 1;
 var channels = 8;
 var count = draw_lines_index.length;
-$(document).ready(function() {
+// $(document).ready(function() {
+//     drawecg();
+//     ecg()
+// });
+
+var callEcgcanvas = {
+  erha: function (mess) {
     drawecg();
-    ecg()
-});
+    ecg();
+  },
+};
 function Queue() {
     var B = new Array();
     var A = 50;

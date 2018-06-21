@@ -14,7 +14,7 @@
   <input type="checkbox" name="chkecg" value="1" checked="checked"/>II
   <input type="checkbox" name="chkecg" value="2" checked="checked"/>III
   <input type="checkbox" name="chkecg" value="3" checked="checked"/>aVR
-  <input type="checkbox" name="chkecg" value="4" checked="checked"/>aVL
+  <input type="checkbox" name="chkecg" value="4" checked="checked·"/>aVL
   <input type="checkbox" name="chkecg" value="5" checked="checked"/>aVF
   <input type="checkbox" name="chkecg" value="6" checked="checked"/>V1
   <input type="checkbox" name="chkecg" value="7" checked="checked"/>V2
@@ -26,11 +26,14 @@
 </div>
 <div id='LogContainer'>
 </div>
-<div class="boack">
-  <canvas id="background" width="1150" height="1300" style="margin-left: 20px">
-  </canvas>
+<div style="width: 1300px; margin: 0 auto" >
+  <div class="boack" style="overflow-x: scroll">
+    <canvas id="background" width="1200" height="1300" style="margin-left: 0">
+    </canvas>
+  </div>
+  <div class="boack" style="overflow-x: scroll">
+    <canvas id="line" width="1200" height="1300" style="margin-left: 10px">
+    </canvas>
+  </div>
 </div>
-<div class="boack">
-  <canvas id="line" width="1150" height="1300" style="margin-left: 20px">
-  </canvas>
-</div>
+
